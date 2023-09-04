@@ -4,20 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../clase 2/estilos.css">
   <title>Home</title>
 </head>
 
 <body>
   <!-- Ejercicio 2 -->
-  <section id="top">
+  <section id="top" class="ex-section">
     <h1>Bienvenidos a mi página web</h1>
     <p>Este es otro archivo HTML que solo muestra la página HOME.</p>
   </section>
 
-  <hr>
-
   <!-- Ejercicio 3 -->
-  <section class="wiki">
+  <section id="wiki" class="ex-section">
     <a href="https://www.wikipedia.org/">
       <img src="./wiki-logo.webp" alt="wikipedia logo" width="100">
       <br />
@@ -26,8 +25,8 @@
   </section>
 
   <!-- Ejercicio 4 -->
-  <section id="hobbies">
-    <h2>Gustos/hobbies</h2>
+  <section id="hobbies-section" class="ex-section">
+    <h2 id="hobbies-title">Gustos/hobbies</h2>
     <ul>
       <li>Jugar videojuegos</li>
       <li>Dibujar</li>
@@ -39,9 +38,9 @@
   </section>
 
   <!-- Ejercicio 5 -->
-  <section class="tabla">
-    <h2>Tabla de noseque</h2>
-    <table>
+  <section id="tabla-section" class="ex-section">
+    <h2 id="tabla-title">Tabla de noseque</h2>
+    <table id="tabla">
       <tr>
         <th>Nombre</th>
         <th>Edad</th>
@@ -62,7 +61,7 @@
   </section>
 
   <!-- Ejercicio 6 -->
-  <section id="formulario">
+  <section id="formulario" class="ex-section">
     <h2>Formulario</h2>
     <form>
       <label for="name">Nombre</label>
@@ -76,19 +75,19 @@
   <!-- El proposito de esta pagina es la de completar los ejercicios asignados por los trainers del Learning Camp dado por Rootstrap -->
 
   <!-- Ejercicio 9 -->
-  <section>
+  <section id="links" class="ex-section">
     <br />
-    <a href="home.html#top">Volver al Top</a>
+    <a href="home.html#top" class="linkTo">Volver al Top</a>
     <br />
-    <a href="home.html#wiki">Wikipedia</a>
+    <a href="home.html#wiki" class="linkTo">Wikipedia</a>
     <br />
-    <a href="home.html#hobbies">Hobbies</a>
+    <a href="home.html#hobbies" class="linkTo">Hobbies</a>
     <br />
-    <a href="home.html#tabla">Tabla</a>
+    <a href="home.html#tabla" class="linkTo">Tabla</a>
     <br />
-    <a href="home.html#formulario">Formulario</a>
+    <a href="home.html#formulario" class="linkTo">Formulario</a>
     <br />
-    <a href="./anotherPage.html">Otra página con header y footer</a>
+    <a href="./anotherPage.html" class="linkTo">Otra página con header y footer</a>
     <br />
   </section>
 
