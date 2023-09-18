@@ -1,0 +1,48 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  width: 1200px;
+  padding: 50px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ex-section {
+  border-bottom: solid 2px red;
+  border-radius: 5px;
+  padding: 0 0 10px 10px;
+  margin-top: 20px;
+}
+
+#hobbies-section, #tabla-section {
+  height: 300px;
+  width: 49%;
+  padding: 0;
+  border-radius: 0;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+#hobbies-title, #tabla-title {
+  text-align: center;
+}
+
+#tabla {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#tabla td {
+  height: 30px;
+  border-top: 1px solid #ddd;
+}
