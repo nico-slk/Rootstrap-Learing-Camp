@@ -1,30 +1,6 @@
 
 console.log('Logic online!');
 
-
-// let ACButton = document.querySelector('#AC');
-// let parentesisButton = document.querySelector('#parentesis');
-// let porcentajeButton = document.querySelector('#porcentaje');
-// let divisionButton = document.querySelector('#division');
-// let sevenButton = document.querySelector('#seven');
-// let eightButton = document.querySelector('#eight');
-// let nineButton = document.querySelector('#nine');
-// let multButton = document.querySelector('#mult');
-// let fourButton = document.querySelector('#four');
-// let fiveButton = document.querySelector('#five');
-// let sixButton = document.querySelector('#six');
-// let restaButton = document.querySelector('#resta');
-// let oneButton = document.querySelector('#one');
-// let twoButton = document.querySelector('#two');
-// let threeButton = document.querySelector('#three');
-// let plusButton = document.querySelector('#plus');
-// let zeroButton = document.querySelector('#zero');
-// let dotButton = document.querySelector('#dot');
-// let delButton = document.querySelector('#del');
-// let equButton = document.querySelector('#equ');
-
-// const button = document.querySelectorAll('.btn');
-
 let number_button = document.querySelectorAll('.num');
 let operation_button = document.querySelectorAll('.op');
 let AC = document.querySelector('.AC');
@@ -62,19 +38,19 @@ function calculator(a, b, operation) {
 
       switch (operation) {
         case '+':
-          results = a + b;
+          results = sum(a, b);
           break;
 
         case '-':
-          results = a - b;
+          results = substract(a, b);
           break;
 
         case 'x':
-          results = a * b;
+          results = multiply(a, b);
           break;
 
         case '/':
-          results = a / b;
+          results = divide(a, b);
           break;
 
         default:
@@ -127,7 +103,3 @@ equal.addEventListener('click', () => {
   middle_text.firstChild.textContent = bottom_textContent;
   bottom_text.firstChild.textContent = result;
 });
-
-// let top_textContent = top_text.firstChild.textContent;
-// let middle_textContent = middle_text.firstChild.textContent;
-// let bottom_textContent = bottom_text.firstChild.textContent;
