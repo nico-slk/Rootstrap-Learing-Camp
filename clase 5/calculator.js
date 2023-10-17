@@ -1,16 +1,15 @@
 
 console.log('Logic online!');
 
-let number_button = document.querySelectorAll('.num');
-let operation_button = document.querySelectorAll('.op');
-let AC = document.querySelector('.AC');
+let numberButton = document.querySelectorAll('.num');
+let operationButton = document.querySelectorAll('.op');
+let ac = document.querySelector('.AC');
 let equal = document.querySelector('.equal');
-let top_text = document.querySelector('#top_text');
-let middle_text = document.querySelector('#middle_text');
-let bottom_text = document.querySelector('#bottom_text');
+let middleText = document.querySelector('#middle_text');
+let bottomText = document.querySelector('#bottom_text');
 let isOperationUsed = false;
-let bottom_textContent = bottom_text.firstChild.textContent;
-let middle_textContent = middle_text.firstChild.textContent;
+let bottomTextContent = bottomText.firstChild.textContent;
+let middleTextContent = middleText.firstChild.textContent;
 
 function sum(a, b) {
   return a + b;
@@ -32,7 +31,7 @@ function calculator(a, b, operation) {
   let results;
   a = Number(a);
   b = Number(b);
-  if (!isNaN(Number(a)) && !isNaN(Number(b))) {
+  if (!isNaN(a) && !isNaN(b)) {
 
     if (typeof operation === 'string') {
 
@@ -61,45 +60,45 @@ function calculator(a, b, operation) {
   return results;
 }
 
-number_button.forEach(btn =>
+numberButton.forEach(btn =>
   btn.addEventListener('click', e => {
 
-    if (bottom_textContent === '0') {
-      bottom_textContent = e.target.innerText;
-      bottom_text.firstChild.textContent = bottom_textContent;
+    if (bottomTextContent === '0') {
+      bottomTextContent = e.target.innerText;
+      bottomText.firstChild.textContent = bottomTextContent;
     } else {
-      bottom_textContent = bottom_textContent + e.target.innerText;
-      bottom_text.firstChild.textContent = bottom_textContent;
+      bottomTextContent = bottomTextContent + e.target.innerText;
+      bottomText.firstChild.textContent = bottomTextContent;
     }
   })
 );
 
-operation_button.forEach(btn =>
+operationButton.forEach(btn =>
   btn.addEventListener('click', e => {
 
     if (!isOperationUsed) {
-      bottom_textContent = `${bottom_textContent} ${e.target.innerText} `;
-      bottom_text.firstChild.textContent = bottom_textContent;
+      bottomTextContent = `${bottomTextContent} ${e.target.innerText} `;
+      bottomText.firstChild.textContent = bottomTextContent;
     }
     isOperationUsed = true;
   })
 );
 
-AC.addEventListener('click', () => {
-  bottom_text.firstChild.textContent = '0';
-  middle_text.firstChild.textContent = ' ';
-  bottom_textContent = bottom_text.firstChild.textContent;
+ac.addEventListener('click', () => {
+  bottomText.firstChild.textContent = '0';
+  middleText.firstChild.textContent = ' ';
+  bottomTextContent = bottomText.firstChild.textContent;
   isOperationUsed = false;
 });
 
 equal.addEventListener('click', () => {
-  const operation = bottom_textContent.split(' ');
+  const operation = bottomTextContent.split(' ');
   let result = calculator(operation[0], operation[2], operation[1]);
 
   if (result === Infinity) {
     result = 'Error!';
   }
 
-  middle_text.firstChild.textContent = bottom_textContent;
-  bottom_text.firstChild.textContent = result;
+  middleText.firstChild.textContent = bottomTextContent;
+  bottomText.firstChild.textContent = result;
 });
