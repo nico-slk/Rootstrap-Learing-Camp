@@ -2,8 +2,8 @@ import { Link, Outlet } from 'react-router-dom'
 
 function App() {
   return (
-    <div className='bg-slate-800 text-white h-full min-h-screen p-10 border-2 border-white'>
-      <h1 className='text-5xl '>APP</h1>
+    <div className='bg-slate-800 text-white h-full min-h-screen pb-10 pl-10 pr-10 pt-5 border-2 border-white'>
+      <h1 className='text-5xl my-5'>APP</h1>
       <div className='flex flex-row border-2 border-white'>
         <div className='text-2xl flex flex-col border-2 border-white w-1/5'>
           <Link to={'/home'} className="flex flex-col pt-5 pb-5 items-center hover:bg-slate-600 transition-colors ">HOME</Link>
