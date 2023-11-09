@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
+import { createContext, useState } from 'react';
 
 export const CounterContext = createContext();
 
-export const CounterContextProvider = ({children}) => {
+export const CounterContextProvider = ({ children }) => {
     const [counter, setCounter] = useState(0)
     return (
         <CounterContext.Provider value={{

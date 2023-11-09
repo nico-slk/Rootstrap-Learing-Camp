@@ -1,7 +1,7 @@
-import { useContext, useEffect, useState } from "react"
-import { ClaseOnceContext } from "./ClaseOnceContext"
-import { Services } from "../../service/services"
-import { ClaseOnceCard } from "./ClaseOnceCard"
+import { useContext, useEffect, useState } from 'react'
+import { ClaseOnceContext } from './ClaseOnceContext'
+import { Services } from '../../service/services'
+import { ClaseOnceCard } from './ClaseOnceCard'
 
 
 export const ClaseOnce = () => {
@@ -12,6 +12,16 @@ export const ClaseOnce = () => {
         Services.getCharacters(state.page || 1, state.size || 10)
             .then(res => setCharacters(res))
     }, [])
+
+    const handleChange = event => {
+        setState({ ...state, [event.target.name]: event.target.value })
+    }
+
+    const handleClick = event => {
+        event.preventDefault()
+        Services.getCharacters(state.page, state.size)
+            .then(res => setCharacters(res))
+    }
 
     return (
         <div className="border-2 ">
@@ -30,7 +40,7 @@ export const ClaseOnce = () => {
                         name="page"
                         className="text-white w-full mt-2 bg-slate-700 p-2 rounded-xl"
                         placeholder="Page"
-                        onChange={e => setState({ ...state, [e.target.name]: e.target.value })}
+                        onChange={handleChange}
                     />
                 </label>
                 <label className=" w-full m-5" htmlFor="size">
@@ -40,19 +50,13 @@ export const ClaseOnce = () => {
                         name="size"
                         placeholder="Size"
                         className="text-white w-full mt-2 bg-slate-700 p-2 rounded-xl"
-                        onChange={e => setState({ ...state, [e.target.name]: e.target.value })}
+                        onChange={handleChange}
                     />
                 </label>
-                <input
-                    type="button"
-                    value="Apply"
+                <button
                     className="text-white border-2 border-slate-600 w-full m-5 hover:border-slate-500 hover:bg-slate-700 rounded-xl active:bg-slate-300 active:text-slate-700 transition-colors"
-                    onClick={(e) => {
-                        e.preventDefault()
-                        Services.getCharacters(state.page, state.size)
-                            .then(res => setCharacters(res))
-                    }}
-                />
+                    onClick={handleClick}
+                >Apply</button>
             </div>
             <div className="flex flex-row flex-wrap pt-10 pb-10 ">
                 {

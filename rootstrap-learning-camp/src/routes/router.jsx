@@ -4,7 +4,6 @@ import { ClaseSiete } from '../components/ClaseSiete';
 import { ClaseOcho } from '../components/ClaseOcho';
 import { ClaseDiez } from '../components/ClaseDiez';
 import { ClaseOnce } from '../components/clase-once/ClaseOnce';
-import { ClaseOnceContextProvider } from '../components/clase-once/ClaseOnceContext';
 import { Home } from '../Home';
 import { ClaseNueve } from '../components/ClaseNueve';
 
@@ -14,31 +13,28 @@ export const router = createBrowserRouter([
         element: <App />,
         children: [
             {
-                path: 'home',
+                path: '/home',
                 element: <Home />
             },
             {
-                path: 'clase-siete',
+                path: '/clase-siete',
                 element: <ClaseSiete />
             },
             {
-                path: 'clase-ocho',
+                path: '/clase-ocho',
                 element: <ClaseOcho />
             },
             {
-                path: 'clase-nueve',
+                path: '/clase-nueve',
                 element: <ClaseNueve />
             },
             {
-                path: 'clase-diez',
+                path: '/clase-diez',
                 element: <ClaseDiez />
             },
             {
-                path: 'clase-once',
-                element:
-                    <ClaseOnceContextProvider >
-                        <ClaseOnce />
-                    </ClaseOnceContextProvider>
+                path: '/clase-once',
+                element: <ClaseOnce />
             },
         ],
         errorElement: <div>Wrong path! ❌</div>
