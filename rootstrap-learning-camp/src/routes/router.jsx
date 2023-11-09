@@ -1,11 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from '../App';
-import { ClaseSiete } from '../elements/ClaseSiete';
-import { ClaseOcho } from '../elements/ClaseOcho';
-import { ClaseDiez } from '../elements/ClaseDiez';
-import { ClaseOnce } from '../elements/clase-once/ClaseOnce';
-import { ClaseOnceContextProvider } from '../elements/clase-once/ClaseOnceContext';
+import { ClaseSiete } from '../components/ClaseSiete';
+import { ClaseOcho } from '../components/ClaseOcho';
+import { ClaseDiez } from '../components/ClaseDiez';
+import { ClaseOnce } from '../components/clase-once/ClaseOnce';
+import { ClaseOnceContextProvider } from '../components/clase-once/ClaseOnceContext';
 import { Home } from '../Home';
+import { ClaseNueve } from '../components/ClaseNueve';
 
 export const router = createBrowserRouter([
     {
@@ -17,16 +18,20 @@ export const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: 'clase-diez',
-                element: <ClaseDiez />
-            },
-            {
                 path: 'clase-siete',
                 element: <ClaseSiete />
             },
             {
                 path: 'clase-ocho',
                 element: <ClaseOcho />
+            },
+            {
+                path: 'clase-nueve',
+                element: <ClaseNueve />
+            },
+            {
+                path: 'clase-diez',
+                element: <ClaseDiez />
             },
             {
                 path: 'clase-once',
