@@ -18,8 +18,7 @@ export const ClaseOnce = () => {
             <div className="p-5">
                 <h3>Context and API</h3>
                 <p>
-                    Utilicé una API de la serie Game of Thrones que permite traer inforamación de los personajes, esta información se guarda en
-                    el contexto y permite elegir la página y la cantidad de personajes por página.
+                    I used an API from the Game of Thrones series that allows you to bring character information, this information is saved in the context and allows you to choose the page and the number of characters per page.
                 </p>
             </div>
             <div className="flex flex-row justify-stretch">

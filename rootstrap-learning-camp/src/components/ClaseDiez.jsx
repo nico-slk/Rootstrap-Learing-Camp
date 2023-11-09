@@ -4,7 +4,7 @@ export const ClaseDiez = () => {
         <div className="p-5">
             <h3>Tailwind & Routes</h3>
             <p>
-                Al igual que en otra clase, agregué estilos con Tailwind y agregué rutas al proyecto, siendo cada ruta una lección diferente y un enrrutamiento a cada actividad de cada clase
+                Like in another class, I added styles with Tailwind and added routes to the project, each route being a different lesson and routing to each activity of each class
             </p>
             <div className="flex flex-row">
                 <img src="https://i.ibb.co/VDTWzQF/routes.png" alt="hooks" className="w-2/3 mt-10" />

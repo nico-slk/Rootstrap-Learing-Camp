@@ -4,8 +4,7 @@ export const ClaseNueve = () => {
         <div className="p-5">
             <h3>Tailwind</h3>
             <p>
-                Utilicé Tailwind para estilizar toda esta aplicación y podrás ver en el código que utilicé react-hooks para administrar
-                los estados propios de los componentes y estados globales usando useContext
+                I used Tailwind to style this entire app and you can see in the code that I used react-hooks to manage components own states and global states using useContext
             </p>
             <div className="flex flex-row">
                 <img src="https://i.ibb.co/8xNRyDD/hooks.png" alt="hooks" className="w-1/2 h-50 m-10" />
